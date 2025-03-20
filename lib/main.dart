@@ -1,5 +1,5 @@
-import 'package:api_learning/home_view.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const TestApp());
@@ -10,9 +10,39 @@ class TestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+        useMaterial3: false,
+      ),
+      darkTheme: ThemeData.dark(
+        useMaterial3: false,
+      ),
+
+      // home: WebScrapingScreen(),
+      home: const QuranTestApp(),
+    );
+  }
+}
+
+class QuranTestApp extends StatefulWidget {
+  const QuranTestApp({super.key});
+
+  @override
+  State<QuranTestApp> createState() => _QuranTestAppState();
+}
+
+class _QuranTestAppState extends State<QuranTestApp> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+
     );
   }
 }
