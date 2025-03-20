@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_library/quran.dart';
 
 
 void main() {
@@ -37,11 +38,13 @@ class _QuranTestAppState extends State<QuranTestApp> {
   @override
   void initState() {
     super.initState();
+    QuranLibrary().init();
   }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      body: QuranLibraryScreen(),
 
     );
   }
